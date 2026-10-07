@@ -24,4 +24,3 @@ jobs:
       - uses: leanprover/lean-action@v1
         with:
           lake-package-directory: ./src/Lean/Project
-      - uses: leanprover-community/docgen-action@v1
