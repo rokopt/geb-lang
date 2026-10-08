@@ -9,10 +9,6 @@ on:
     paths:
       - 'lean-toolchain'
 
-defaults:
-  run:
-    working-directory: ./src/Lean/Project
-
 jobs:
   lean-release-tag:
     name: Add Lean release tag

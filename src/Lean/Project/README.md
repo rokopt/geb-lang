@@ -1,4 +1,4 @@
-# Project
+# Geb
 
 ## GitHub configuration
 
