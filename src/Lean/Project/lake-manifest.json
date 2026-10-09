@@ -15,6 +15,18 @@
       "configFile": "lakefile.lean"
     },
     {
+      "url": "https://github.com/leanprover/cslib",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover",
+      "rev": "4f4086a6426d96103b13ef7ec9171b9c2bf15d17",
+      "name": "cslib",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.35.0-rc4",
+      "inherited": false,
+      "configFile": "lakefile.toml"
+    },
+    {
       "url": "https://github.com/leanprover-community/mathlib4",
       "type": "git",
       "subDir": null,
