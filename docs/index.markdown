@@ -4,3 +4,5 @@
 
 layout: home
 ---
+
+[`docgen` documentation]({{ '/docs/' | relative_url }})
