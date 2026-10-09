@@ -1,3 +1,5 @@
+name: Lint Style
+
 on:
   push:
   pull_request:
@@ -8,7 +10,7 @@ jobs:
     name: Lint style
     runs-on: ubuntu-latest
     steps:
-      - uses: leanprover-community/lint-style-action
+      - uses: leanprover-community/lint-style-action@main
         with:
           mode: check
           lint-bib-file: true
