@@ -14,5 +14,10 @@ name = "mathlib"
 scope = "leanprover-community"
 rev = "v4.35.0-rc4"
 
+[[require]]
+name = "verso"
+git = "https://github.com/leanprover/verso.git"
+rev = "latest"
+
 [[lean_lib]]
 name = "Geb"
