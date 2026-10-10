@@ -2,6 +2,7 @@ alias b := build
 alias s := serve
 alias u := update
 alias c := clean
+alias ub := update-and-build
 
 build:
 	lake build
@@ -19,6 +20,8 @@ update:
 	lake update
 	lake exe cache get
 	npx prettier --write .
+
+update-and-build: update build
 
 serve:
 	lake exe verso-serve html
