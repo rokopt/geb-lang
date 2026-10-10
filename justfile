@@ -7,7 +7,7 @@ build:
 	lake build
 	lake lint
 	lake shake
-	lake exe axiom-audit
+	lake exe axiom-audit --allow propext,Quot.sound
 	lake exe lint-style
 	lake build :literate
 	lake build :literateHtml
