@@ -21,6 +21,12 @@ scope = "leanprover"
 rev = "v4.35.0-rc4"
 
 [[require]]
+name = "axiom-audit"
+scope = "leanprover-community"
+git = "https://github.com/leanprover-community/axiom-audit"
+rev = "main"
+
+[[require]]
 name = "Canonical"
 scope = "chasenorman"
 
