@@ -6,3 +6,4 @@ layout: home
 ---
 
 [`docgen` documentation]({{ '/docs/' | relative_url }})
+[`verso` documentation]({{ '/verso/' | relative_url }})
