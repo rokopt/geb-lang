@@ -18,6 +18,7 @@ build:
 update:
 	lake update
 	lake exe cache get
+	npx prettier --write .
 
 serve:
 	lake exe verso-serve html
