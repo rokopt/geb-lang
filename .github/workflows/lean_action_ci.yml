@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: leanprover/lean-action@v1
+      - uses: extractions/setup-just@v4
       - name: Full `just update`/`just build`
-        uses: extractions/setup-just@v4
         run: |
           just update-and-build
