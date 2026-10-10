@@ -9,6 +9,8 @@ pp.unicode.fun = true # pretty-prints `fun a ↦ b`
 relaxedAutoImplicit = false
 weak.linter.mathlibStandardSet = true
 maxSynthPendingDepth = 3
+linter.missingDocs = true
+warningAsError = true
 
 [[require]]
 name = "mathlib"
@@ -19,6 +21,11 @@ rev = "v4.35.0-rc4"
 name = "cslib"
 scope = "leanprover"
 rev = "v4.35.0-rc4"
+
+[[require]]
+name = "doc-gen4"
+scope = "leanprover"
+rev = "main"
 
 [[require]]
 name = "axiom-audit"
