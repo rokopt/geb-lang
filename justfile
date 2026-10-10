@@ -15,6 +15,7 @@ build:
 	lake build :literate
 	lake build :literateHtml
 	lake exe verso-html .lake/build/literate html
+	DOCGEN_SRC=file lake build Geb:docs
 	npx prettier --check .
 
 update:
@@ -31,7 +32,7 @@ build-and-markdownlint: build markdownlint
 
 update-and-build-and-markdownlint: update build markdownlint
 
-serve:
+serve: build-and-markdownlint
 	lake exe verso-serve html
 
 clean:

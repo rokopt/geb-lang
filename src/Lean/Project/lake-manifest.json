@@ -39,6 +39,18 @@
       "configFile": "lakefile.toml"
     },
     {
+      "url": "https://github.com/leanprover/doc-gen4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover",
+      "rev": "fd5ce8f50b90096067f4e5d867611b585e951dbb",
+      "name": "«doc-gen4»",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": false,
+      "configFile": "lakefile.lean"
+    },
+    {
       "url": "https://github.com/leanprover/cslib",
       "type": "git",
       "subDir": null,
@@ -121,6 +133,42 @@
       "inputRev": "main",
       "inherited": true,
       "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/leanprover/leansqlite",
+      "type": "git",
+      "subDir": null,
+      "scope": "",
+      "rev": "9e920dfb887e7ecd005b42cd6c24a231a371c817",
+      "name": "leansqlite",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/fgdorais/lean4-unicode-basic",
+      "type": "git",
+      "subDir": null,
+      "scope": "",
+      "rev": "add01df7af4013f448d1222422af55c98f06f66f",
+      "name": "UnicodeBasic",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/dupuisf/BibtexQuery",
+      "type": "git",
+      "subDir": null,
+      "scope": "",
+      "rev": "abaad6dd56aea97f6d1819d3c12fa0224126384f",
+      "name": "BibtexQuery",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "master",
+      "inherited": true,
+      "configFile": "lakefile.toml"
     },
     {
       "url": "https://github.com/leanprover-community/LeanSearchClient",
