@@ -37,12 +37,7 @@ jobs:
       #   - Installing elan (the Lean version manager)
       #   - Reading lean-toolchain to select the right Lean version
       #   - Caching .lake for faster subsequent builds
-      # We disable its default build/test since we only need :literateHtml.
       - uses: leanprover/lean-action@v1
-        with:
-          build: false
-          test: false
-
       - name: Build homepage and `docgen` docs
         uses: leanprover-community/docgen-action@main
         with:
