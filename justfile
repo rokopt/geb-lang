@@ -8,7 +8,8 @@ build:
 	lake lint
 	lake shake
 	lake exe lint-style
-	lake build Geb:literate
+	lake build :literate
+	lake build :literateHtml
 	lake exe verso-html .lake/build/literate html
 	npx prettier --check .
 
