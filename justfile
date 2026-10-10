@@ -6,12 +6,16 @@ alias ub := update-and-build
 alias bm := build-and-markdownlint
 alias ubm := update-and-build-and-markdownlint
 
+bib_file := "docs/references.bib"
+
 build:
 	lake build
 	lake lint
 	lake shake
 	lake exe axiom-audit --allow propext,Quot.sound
 	lake exe lint-style
+	bibtool --preserve.key.case=on --preserve.keys=on --print.use.tab=off --pass.comments=on \
+		-s -i {{ bib_file }} -o {{ bib_file }}
 	lake build :literate
 	lake build :literateHtml
 	lake exe verso-html .lake/build/literate html
