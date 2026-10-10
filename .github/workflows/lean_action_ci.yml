@@ -18,7 +18,10 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: leanprover/lean-action@v1
+      - uses: extractions/setup-just@v4
+      - uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff # v24.2.0
+        with:
+          config: ".markdownlint-cli2.jsonc"
       - name: Full `just update`/`just build`
-        uses: extractions/setup-just@v4
         run: |
           just update-and-build

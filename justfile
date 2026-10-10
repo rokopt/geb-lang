@@ -3,6 +3,8 @@ alias s := serve
 alias u := update
 alias c := clean
 alias ub := update-and-build
+alias bm := build-and-markdownlint
+alias ubm := update-and-build-and-markdownlint
 
 build:
 	lake build
@@ -14,14 +16,20 @@ build:
 	lake build :literateHtml
 	lake exe verso-html .lake/build/literate html
 	npx prettier --check .
-	markdownlint-cli2
 
 update:
 	lake update
 	lake exe cache get
 	npx prettier --write .
 
+markdownlint:
+	markdownlint-cli2
+
 update-and-build: update build
+
+build-and-markdownlint: build markdownlint
+
+update-and-build-and-markdownlint: update build markdownlint
 
 serve:
 	lake exe verso-serve html
