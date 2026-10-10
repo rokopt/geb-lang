@@ -13,6 +13,7 @@ build:
 	lake build :literateHtml
 	lake exe verso-html .lake/build/literate html
 	npx prettier --check .
+	markdownlint-cli2
 
 update:
 	lake update
