@@ -3,11 +3,12 @@
 
 name: Deploy to GitHub Pages
 
+env:
+  DOCS_DIR: docs/_site
+
 on:
   push:
     branches: [main]
-  # Allows manual deployment from the Actions tab
-  workflow_dispatch:
 
 # Permissions required for GitHub Pages deployment:
 #   contents:read  — to check out the repository
@@ -42,14 +43,22 @@ jobs:
           build: false
           test: false
 
-      - name: Build literate site
-        id: build
-        run: echo "path=$(lake query :literateHtml)" >> "$GITHUB_OUTPUT"
+      - name: Build homepage and `docgen` docs
+        uses: leanprover-community/docgen-action@main
+        with:
+          ruby-version: default
+          deploy: "false"
 
-      - name: Upload Pages artifact
+      - name: Copy `verso` docs into artifact
+        run: |
+          literate_dir=$(lake query :literateHtml)
+          mkdir -p "$DOCS_DIR/verso"
+          cp -a "$literate_dir/." "$DOCS_DIR/verso/"
+
+      - name: Upload combined artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ steps.build.outputs.path }}
+          path: ${{ env.DOCS_DIR }}
 
   deploy:
     needs: build
