@@ -24,4 +24,5 @@ jobs:
           config: ".markdownlint-cli2.jsonc"
       - name: Full `just update`/`just build`
         run: |
+          sudo apt install -y bibtool
           just update-and-build
