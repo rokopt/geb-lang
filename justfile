@@ -33,7 +33,7 @@ build-and-markdownlint: build markdownlint
 update-and-build-and-markdownlint: update build markdownlint
 
 serve: build-and-markdownlint
-	lake exe verso-serve html
+	lake exe verso-serve $(lake query :literateHtml)
 
 clean:
 	lake cache clean
