@@ -15,6 +15,18 @@
       "configFile": "lakefile.lean"
     },
     {
+      "url": "https://github.com/chasenorman/CanonicalLean",
+      "type": "git",
+      "subDir": null,
+      "scope": "chasenorman",
+      "rev": "1d80841851dd7886cf19b907d65ddb5c5dea89b6",
+      "name": "Canonical",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "master",
+      "inherited": false,
+      "configFile": "lakefile.lean"
+    },
+    {
       "url": "https://github.com/leanprover/cslib",
       "type": "git",
       "subDir": null,

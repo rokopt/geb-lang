@@ -21,6 +21,10 @@ scope = "leanprover"
 rev = "v4.35.0-rc4"
 
 [[require]]
+name = "Canonical"
+scope = "chasenorman"
+
+[[require]]
 name = "verso"
 git = "https://github.com/leanprover/verso.git"
 rev = "latest"
