@@ -13,4 +13,4 @@ jobs:
       - uses: leanprover-community/lint-style-action@main
         with:
           mode: check
-          lint-bib-file: false
+          lint-bib-file: true
