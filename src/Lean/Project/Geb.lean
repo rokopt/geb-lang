@@ -1,3 +1,4 @@
 module
 
-import Geb.Basic
+public import Geb.Basic
+import all Geb.Basic
