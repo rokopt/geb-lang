@@ -12,6 +12,7 @@
     "**/html/**",
     ".jj/**",
     ".git/**",
+    ".remember/**",
     "**/node_modules/**",
   ],
 }
