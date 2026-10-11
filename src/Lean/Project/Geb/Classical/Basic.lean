@@ -8,6 +8,6 @@ set_option doc.verso.module false
 namespace ClassicalTest
 
 /-- Test allowance of choice under the `Geb.Classical` directory.  -/
-protected theorem classicalProp {α : Prop} : Nonempty α → α := Classical.choice.{0}
+public theorem classicalProp {α : Prop} : Nonempty α → α := Classical.choice.{0}
 
 end ClassicalTest
