@@ -10,4 +10,4 @@ See [Polynomial Functors: A Mathematical Theory of Interaction][niu2023polynomia
 
 [niu2023polynomial]: https://arxiv.org/abs/2312.00990
 -/
-public def hello := "world"
+public def constructiveHello := "constructiveWorld"

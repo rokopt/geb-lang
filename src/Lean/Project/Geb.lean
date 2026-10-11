@@ -1,7 +1,9 @@
 module
 
-public import Geb.Basic
-import all Geb.Basic
+public import Geb.Constructive
+import all Geb.Constructive
+public import Geb.Classical
+import all Geb.Classical
 
 set_option doc.verso true
 set_option doc.verso.module false
