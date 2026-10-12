@@ -13,11 +13,6 @@ linter.missingDocs = true
 warningAsError = true
 
 [[require]]
-name = "mathlib"
-scope = "leanprover-community"
-rev = "v4.35.0-rc4"
-
-[[require]]
 name = "cslib"
 scope = "leanprover"
 rev = "v4.35.0-rc4"
@@ -41,6 +36,11 @@ scope = "chasenorman"
 name = "verso"
 git = "https://github.com/leanprover/verso.git"
 rev = "latest"
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.35.0-rc4"
 
 [[lean_lib]]
 name = "Geb"
