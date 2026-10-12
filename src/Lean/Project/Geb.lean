@@ -6,9 +6,8 @@ public import Geb.Classical
 import all Geb.Classical
 
 set_option doc.verso true
-set_option doc.verso.module false
 
 /-! # Root module
 
-Root of all `geb-lang` imports.
+Root of all {lit}`geb-lang` imports.
 -/
