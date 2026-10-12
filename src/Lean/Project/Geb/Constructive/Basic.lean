@@ -1,9 +1,8 @@
 module
 
 set_option doc.verso true
-set_option doc.verso.module false
 
-/-! # Initial test module -/
+/-! # Initial constructive test module -/
 
 namespace ConstructiveTest
 

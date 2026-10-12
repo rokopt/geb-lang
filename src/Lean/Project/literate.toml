@@ -1,3 +1,2 @@
 landing_page = "Geb"
 docstrings_as_text = true
-hide_commands = ["set_option"]
