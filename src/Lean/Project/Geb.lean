@@ -4,8 +4,6 @@ public import Geb.Constructive
 import all Geb.Constructive
 public import Geb.Classical
 import all Geb.Classical
-public import Geb.Manual
-import all Geb.Manual
 
 set_option doc.verso true
 

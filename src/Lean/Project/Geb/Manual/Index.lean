@@ -1,5 +1,3 @@
-module
-
 set_option doc.verso true
 
 /-! #  Manual index

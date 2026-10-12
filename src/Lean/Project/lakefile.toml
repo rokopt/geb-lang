@@ -44,3 +44,4 @@ rev = "latest"
 
 [[lean_lib]]
 name = "Geb"
+roots = ["Geb", "Geb.Manual"]

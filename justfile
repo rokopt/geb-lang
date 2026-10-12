@@ -11,7 +11,7 @@ bib_file := "docs/references.bib"
 build:
 	lake build
 	lake lint
-	lake shake
+	lake shake Geb
 	lake exe axiom-audit --root "Geb.Constructive" --allow propext,Quot.sound
 	lake exe axiom-audit --root "Geb.Classical" --allow propext,Quot.sound,Classical.choice
 	lake exe axiom-audit --root "Geb.Manual" --allow propext,Quot.sound,Classical.choice
