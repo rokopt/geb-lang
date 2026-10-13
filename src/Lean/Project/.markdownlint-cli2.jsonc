@@ -1,18 +1,1 @@
-{
-  "config": {
-    "default": true,
-    "MD013": {
-      "tables": false,
-      "code_blocks": false,
-    },
-  },
-  "globs": ["**/*.md"],
-  "ignores": [
-    "**/.lake/**",
-    "**/html/**",
-    ".jj/**",
-    ".git/**",
-    ".remember/**",
-    "**/node_modules/**",
-  ],
-}
+../../../.markdownlint-cli2.jsonc
