@@ -5,6 +5,8 @@
 layout: home
 ---
 
-[`docgen` documentation]({{ '/docs/' | relative_url }})
-[`verso` documentation]({{ '/verso/' | relative_url }})
-[`verso` manual]({{ '/verso/Geb/Manual/TitlePage' | relative_url }})
+# Documentation links
+
+- [`docgen` documentation]({{ '/docs/' | relative_url }})
+- [`verso` documentation]({{ '/verso/' | relative_url }})
+- [`verso` manual]({{ '/verso/Geb/Manual/TitlePage' | relative_url }})
