@@ -1,6 +1,7 @@
 alias b := build
 alias s := serve
 alias u := update
+alias m := markdownlint
 alias c := clean
 alias ub := update-and-build
 alias bm := build-and-markdownlint
