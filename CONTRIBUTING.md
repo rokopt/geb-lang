@@ -11,7 +11,7 @@
 
 - Geb is [free and open source software](https://en.wikipedia.org/wiki/Free_and_open-source_software).
   As such we acknowledge that some may put it to unethical uses (whatever one's
-  ethics).  We do not take this lightly, but rather write Geb with the intent
+  ethics). We do not take this lightly, but rather write Geb with the intent
   that its principal contribution be to promote reliable, robust engineering and
   communication, and with the belief that creation and preservation depend far
   more heavily on those qualities than does destruction, and that therefore the
@@ -43,13 +43,13 @@ When writing Lean:
   - [cslib's style guidelines](https://github.com/leanprover/cslib/blob/main/CODESTYLE.md)
 - We interpret Geb's logics into Lean; when we define known concepts in Geb,
   we use Lean, `mathlib`, and `cslib` to prove that the Geb concepts correspond
-  to the known concepts that we intend.  For example, if we define a notion
+  to the known concepts that we intend. For example, if we define a notion
   of a category internal to Geb's metalogic, then we prove that the Lean
   interpretation of that Geb notion is an instance of `mathlib`'s `Category`.
 - We avoid use of `Classical` (usually meaning `Classical.choice`) insofar as
   possible. It may be unavoidable when attempting to prove that one of our
   concepts defined in Geb corresponds to Lean's standard libraries' definition,
-  as the latter definition itself may depend on `Classical.choice`.  In such
+  as the latter definition itself may depend on `Classical.choice`. In such
   cases, we define and prove as much as possible without using
   `Classical.choice`, and place that development under `Geb/Constructive`,
   then place what inevitably depends on `Classical.choice` under
