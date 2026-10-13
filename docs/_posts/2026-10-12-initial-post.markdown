@@ -6,4 +6,3 @@ categories: initial commit
 ---
 
 This is the documentation hub for the Geb programming language.
-See the top of the page for documentation links.
