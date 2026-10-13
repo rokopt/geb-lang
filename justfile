@@ -6,8 +6,16 @@ alias c := clean
 alias ub := update-and-build
 alias bm := build-and-markdownlint
 alias ubm := update-and-build-and-markdownlint
+alias pc := prettier-check
+alias pw := prettier-write
 
 bib_file := "docs/references.bib"
+
+prettier-check:
+	npx prettier --check .
+
+prettier-write:
+	npx prettier --write .
 
 build:
 	lake build
