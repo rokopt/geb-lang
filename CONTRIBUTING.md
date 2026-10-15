@@ -38,7 +38,7 @@
 ## Fluidity and uncertainty
 
 In this section I'm writing as the original author at the time of the project's
-inception.  This repository is in such an early state that I expect to remain
+inception. This repository is in such an early state that I expect to remain
 the only contributor or even would-be contributor for at least some months.
 Furthermore, this document attempts to address some concerns which are new to
 the entire world (especially [the section on AI use](#ai--llm-use)).
