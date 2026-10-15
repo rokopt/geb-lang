@@ -19,10 +19,10 @@
       "type": "git",
       "subDir": null,
       "scope": "",
-      "rev": "a9297ba911439963d6a71156bfdf5d46c07f090a",
+      "rev": "304b8561790c50222551c937ce02928df0d5b445",
       "name": "verso",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "latest",
+      "inputRev": "v4.35.0",
       "inherited": false,
       "configFile": "lakefile.lean"
     },
@@ -58,7 +58,7 @@
       "rev": "0e1ffe2e4ba5ecfdfaf15c65b8d3805dbb7134ae",
       "name": "«doc-gen4»",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "main",
+      "inputRev": "v4.35.0",
       "inherited": false,
       "configFile": "lakefile.lean"
     },

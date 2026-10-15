@@ -20,7 +20,7 @@ rev = "v4.35.0"
 [[require]]
 name = "doc-gen4"
 scope = "leanprover"
-rev = "main"
+rev = "v4.35.0"
 
 [[require]]
 name = "axiom-audit"
@@ -31,11 +31,12 @@ rev = "main"
 [[require]]
 name = "Canonical"
 scope = "chasenorman"
+rev = "master"
 
 [[require]]
 name = "verso"
 git = "https://github.com/leanprover/verso.git"
-rev = "latest"
+rev = "v4.35.0"
 
 [[require]]
 name = "mathlib"
