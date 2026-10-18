@@ -41,9 +41,9 @@ build: prettier-check markdownlint
 	lake build
 	lake lint
 	lake shake Geb
-	lake exe axiom-audit --root "Geb.Constructive" --allow propext,Quot.sound
-	lake exe axiom-audit --root "Geb.Classical" --allow propext,Quot.sound,Classical.choice
-	lake exe axiom-audit --root "Geb.Manual" --allow propext,Quot.sound,Classical.choice
+	lake exe axiom-audit --root "Geb.Constructive" --modules-from "Geb/Constructive" --allow propext,Quot.sound
+	lake exe axiom-audit --root "Geb.Classical" --modules-from "Geb/Classical" --allow propext,Quot.sound,Classical.choice
+	lake exe axiom-audit --root "Geb.Manual" --modules-from "Geb/Manual" --allow propext,Quot.sound,Classical.choice
 	lake exe lint-style
 	just bibtool-check
 	lake build :literate
