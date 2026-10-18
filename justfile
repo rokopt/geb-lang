@@ -17,7 +17,7 @@ prettier-check:
 prettier-write:
 	npx prettier --write .
 
-build:
+build: prettier-check markdownlint
 	lake build
 	lake lint
 	lake shake Geb
@@ -33,7 +33,7 @@ build:
 	DOCGEN_SRC=file lake build Geb:docs
 	npx prettier --check .
 
-update:
+update: prettier-check markdownlint
 	lake update
 	lake exe cache get
 	npx prettier --write .
