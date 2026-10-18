@@ -70,5 +70,4 @@ serve: build-and-markdownlint
 	lake exe verso-serve $(lake query :literateHtml)
 
 clean:
-	lake cache clean
 	lake clean
