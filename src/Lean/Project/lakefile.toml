@@ -15,12 +15,12 @@ warningAsError = true
 [[require]]
 name = "cslib"
 scope = "leanprover"
-rev = "v4.35.0"
+rev = "v4.36.0-rc1"
 
 [[require]]
 name = "doc-gen4"
 scope = "leanprover"
-rev = "v4.35.0"
+rev = "v4.36.0-rc1"
 
 [[require]]
 name = "axiom-audit"
@@ -36,12 +36,12 @@ rev = "master"
 [[require]]
 name = "verso"
 git = "https://github.com/leanprover/verso.git"
-rev = "v4.35.0"
+rev = "v4.36.0-rc1"
 
 [[require]]
 name = "mathlib"
 scope = "leanprover-community"
-rev = "v4.35.0"
+rev = "v4.36.0-rc1"
 
 [[lean_lib]]
 name = "Geb"
