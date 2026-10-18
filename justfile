@@ -8,14 +8,34 @@ alias bm := build-and-markdownlint
 alias ubm := update-and-build-and-markdownlint
 alias pc := prettier-check
 alias pw := prettier-write
+alias bc := bibtool-check
+alias bw := bibtool-write
 
 bib_file := "docs/references.bib"
+bib_file_formatted := bib_file + ".formatted"
 
 prettier-check:
 	npx prettier --check .
 
 prettier-write:
 	npx prettier --write .
+
+[private]
+bibtool-format:
+	bibtool --preserve.key.case=on --preserve.keys=on --print.use.tab=off --pass.comments=on \
+		-s -i {{ bib_file }} -o {{ bib_file_formatted }}
+
+bibtool-remove:
+	rm -f {{ bib_file_formatted }}
+
+[private]
+bibtool-move:
+	mv -f {{ bib_file_formatted }} {{ bib_file }}
+
+bibtool-check: bibtool-format && bibtool-remove
+  cmp {{ bib_file }} {{ bib_file_formatted }}
+
+bibtool-write: bibtool-format && bibtool-move
 
 build: prettier-check markdownlint
 	lake build
@@ -25,8 +45,7 @@ build: prettier-check markdownlint
 	lake exe axiom-audit --root "Geb.Classical" --allow propext,Quot.sound,Classical.choice
 	lake exe axiom-audit --root "Geb.Manual" --allow propext,Quot.sound,Classical.choice
 	lake exe lint-style
-	bibtool --preserve.key.case=on --preserve.keys=on --print.use.tab=off --pass.comments=on \
-		-s -i {{ bib_file }} -o {{ bib_file }}
+	just bibtool-check
 	lake build :literate
 	lake build :literateHtml
 	lake exe verso-html .lake/build/literate html
