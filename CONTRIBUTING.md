@@ -109,6 +109,13 @@ guidelines, such as refactoring opportunities.
   integration, to synthesize Geb proofs and programs (since the reference Lean
   interpreter knows Geb terms and their Lean interpretations).
 
+## Processes
+
+- The `justfile` contains recipes for various build tasks. Before submitting
+  code, ensure that `just build-and-markdownlint` succeeds; if you're changing
+  configuration (such as `lakefile.toml`), ensure that
+  `just update-and-build-and-markdownlint` succeeds.
+
 ## Code review
 
 When reviewing code (others' or your own), refer to this document, and the
