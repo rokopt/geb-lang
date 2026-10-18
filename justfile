@@ -10,6 +10,7 @@ alias pc := prettier-check
 alias pw := prettier-write
 alias bc := bibtool-check
 alias bw := bibtool-write
+alias jb := jekyll-build
 
 bib_file := "docs/references.bib"
 bib_file_formatted := bib_file + ".formatted"
@@ -37,6 +38,9 @@ bibtool-check: bibtool-format && bibtool-remove
 
 bibtool-write: bibtool-format && bibtool-move
 
+jekyll-build:
+	(cd docs && bundle exec jekyll build)
+
 build: prettier-check markdownlint
 	lake build
 	lake lint
@@ -50,6 +54,7 @@ build: prettier-check markdownlint
 	lake build :literateHtml
 	lake exe verso-html .lake/build/literate html
 	DOCGEN_SRC=file lake build Geb:docs
+	just jekyll-build
 	npx prettier --check .
 
 update: prettier-check markdownlint

@@ -3,6 +3,7 @@
 /src/Lean/Project/.lake
 /src/Lean/Project/html
 /html
+/docs/_site
 /node_modules
 .remember
 .zvec-grep
