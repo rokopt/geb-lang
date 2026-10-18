@@ -34,7 +34,7 @@
       "rev": "f06340163923d0c05cace3a757206a36cc3cef44",
       "name": "Canonical",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "master",
+      "inputRev": "f06340163923d0c05cace3a757206a36cc3cef44",
       "inherited": false,
       "configFile": "lakefile.lean"
     },
@@ -46,7 +46,7 @@
       "rev": "0b885d88a69982cd76990b502742690b80b1a685",
       "name": "«axiom-audit»",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "main",
+      "inputRev": "0b885d88a69982cd76990b502742690b80b1a685",
       "inherited": false,
       "configFile": "lakefile.toml"
     },
