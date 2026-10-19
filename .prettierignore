@@ -1,0 +1,7 @@
+**/.git
+**/.jj
+**/.svn
+**/.hg
+**/node_modules
+**/.lake
+**/lake-manifest.json
