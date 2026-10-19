@@ -11,6 +11,7 @@ alias pw := prettier-write
 alias bc := bibtool-check
 alias bw := bibtool-write
 alias jb := jekyll-build
+alias ubmj := update-and-build-and-markdownlint-and-jekyll
 
 bib_file := "docs/references.bib"
 bib_file_formatted := bib_file + ".formatted"
@@ -54,7 +55,6 @@ build:
 	lake build :literateHtml
 	lake exe verso-html .lake/build/literate html
 	DOCGEN_SRC=file lake build Geb:docs
-	just jekyll-build
 	npx prettier --check .
 
 update: prettier-check
@@ -70,6 +70,8 @@ update-and-build: update build
 build-and-markdownlint: build markdownlint
 
 update-and-build-and-markdownlint: update build markdownlint
+
+update-and-build-and-markdownlint-and-jekyll: update build markdownlint jekyll-build
 
 serve: build-and-markdownlint
 	lake exe verso-serve $(lake query :literateHtml)
