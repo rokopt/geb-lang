@@ -41,7 +41,7 @@ bibtool-write: bibtool-format && bibtool-move
 jekyll-build:
 	(cd docs && bundle exec jekyll build)
 
-build: prettier-check markdownlint
+build:
 	lake build
 	lake lint
 	lake shake Geb
@@ -57,7 +57,7 @@ build: prettier-check markdownlint
 	just jekyll-build
 	npx prettier --check .
 
-update: prettier-check markdownlint
+update: prettier-check
 	lake update
 	lake exe cache get
 	npx prettier --write .
