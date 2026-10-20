@@ -37,6 +37,9 @@ jobs:
             #   - Installing elan (the Lean version manager)
             #   - Reading lean-toolchain to select the right Lean version
             #   - Caching .lake for faster subsequent builds
+            # Note that the `source` links in the published `docgen`
+            # docs are broken by:
+            #   https://github.com/leanprover-community/docgen-action/issues/13
             - uses: leanprover/lean-action@v1
             - name: Build homepage and `docgen` docs
               uses: leanprover-community/docgen-action@main
