@@ -1,8 +1,11 @@
 name: Update Dependencies
 
+env:
+  PACKAGE_DIR: src/Lean/Project
+
 on:
-  # schedule:             # Sets a schedule to trigger the workflow
-  #   - cron: "0 8 * * *" # Every day at 08:00 AM UTC (see https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule)
+  schedule: # Sets a schedule to trigger the workflow
+    - cron: "0 8 * * *" # Every day at 08:00 AM UTC (see https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule)
   workflow_dispatch: # Allows the workflow to be triggered manually via the GitHub interface
 
 jobs:
@@ -16,6 +19,7 @@ jobs:
         id: check-for-updates
         uses: leanprover-community/mathlib-update-action@v1
         # START CONFIGURATION BLOCK 1
+        lake_package_directory: ${{ env.PACKAGE_DIR }}
         # END CONFIGURATION BLOCK 1
   do-update: # Runs the upgrade, tests it, and makes a PR/issue/commit.
     runs-on: ubuntu-latest
@@ -38,4 +42,5 @@ jobs:
           # START CONFIGURATION BLOCK 2
           on_update_succeeds: pr # Create a pull request if the update succeeds
           on_update_fails: issue # Create an issue if the update fails
+          lake_package_directory: ${{ env.PACKAGE_DIR }}
           # END CONFIGURATION BLOCK 2
