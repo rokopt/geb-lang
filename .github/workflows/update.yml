@@ -21,6 +21,7 @@ jobs:
         # START CONFIGURATION BLOCK 1
         with:
           lake_package_directory: ${{ env.PACKAGE_DIR }}
+          intermediate_releases: stable
         # END CONFIGURATION BLOCK 1
   do-update: # Runs the upgrade, tests it, and makes a PR/issue/commit.
     runs-on: ubuntu-latest

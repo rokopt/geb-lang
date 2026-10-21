@@ -1,5 +1,8 @@
 name: Create Release
 
+# Note that this action is broken -- it never actually detects a release -- by:
+#   https://github.com/leanprover-community/lean-release-tag/issues/3
+
 on:
   workflow_dispatch:
   push:
