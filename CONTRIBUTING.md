@@ -88,6 +88,11 @@ When writing Lean:
   a notion of a category internal to Geb's metalogic, prove that the Lean
   interpretation of that Geb notion is an instance of `mathlib`'s
   `Category`.
+- Never use explicit recursion, via either terms or tactics. Define all data
+  structures using `mathlib`'s W-types or M-types, or `cslib`'s free monads,
+  or derivatives thereof (including our own), and define functions into and
+  out of them using the universal properties of those types (initial
+  algebras, terminal coalgebras, adjunctions with forgetful functors).
 - Avoid use of `Classical` (usually meaning `Classical.choice`) insofar as
   possible. It may be unavoidable when attempting to prove that one of our
   concepts defined in Geb corresponds to Lean's standard libraries'
