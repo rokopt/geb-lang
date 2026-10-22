@@ -73,27 +73,36 @@ may induce changes to previously-accepted _code_.)
 
 When writing Lean:
 
-- Use [Verso markup](https://verso.lean-lang.org/doc/latest/Verso-Markup/#verso-markup).
-- When introducing or extending concepts, add to the reference manual under
-  `Geb/Manual` to explain and index them.
 - Whenever not explicitly overridden by Geb style guidelines, adhere to:
   - [Lean's/mathlib's style guidelines](https://leanprover-community.github.io/contribute/style.html)
   - [cslib's style guidelines](https://github.com/leanprover/cslib/blob/main/CODESTYLE.md)
-    (We are stricter in some cases; see in particular [below](#ai--llm-use).)
-- We interpret Geb's logics into Lean; when we define known concepts in Geb,
-  we use Lean, `mathlib`, and `cslib` to prove that the Geb concepts correspond
-  to the known concepts that we intend. For example, if we define a notion
-  of a category internal to Geb's metalogic, then we prove that the Lean
-  interpretation of that Geb notion is an instance of `mathlib`'s `Category`.
-- We avoid use of `Classical` (usually meaning `Classical.choice`) insofar as
+    (We are stricter in some cases; see in particular the remainder of
+    these Lean style rules, and the
+    [section on AI/LLM use below](#ai--llm-use).)
+- Use [Verso markup](https://verso.lean-lang.org/doc/latest/Verso-Markup/#verso-markup).
+- When introducing or extending concepts, add to the reference manual under
+  `Geb/Manual` to explain and index them.
+- We interpret Geb's logics into Lean; whenever you define a known concept in
+  Geb, use Lean, `mathlib`, and `cslib` to prove that the Geb concept
+  corresponds to the known concept that we intend. For example, if you define
+  a notion of a category internal to Geb's metalogic, prove that the Lean
+  interpretation of that Geb notion is an instance of `mathlib`'s
+  `Category`.
+- Never use explicit recursion, via either terms or tactics. Define all data
+  structures using `mathlib`'s W-types or M-types, or `cslib`'s free monads,
+  or derivatives thereof (including our own), and define functions into and
+  out of them using the universal properties of those types (initial
+  algebras, terminal coalgebras, adjunctions with forgetful functors).
+- Avoid use of `Classical` (usually meaning `Classical.choice`) insofar as
   possible. It may be unavoidable when attempting to prove that one of our
-  concepts defined in Geb corresponds to Lean's standard libraries' definition,
-  as the latter definition itself may depend on `Classical.choice`. In such
-  cases, we define and prove as much as possible without using
-  `Classical.choice`, and place that development under `Geb/Constructive`,
-  then place what inevitably depends on `Classical.choice` under
-  `Geb/Classical`, keeping that code as close to being mere wrappers around
-  `Geb/Constructive` code to instantiate the Lean-library concepts.
+  concepts defined in Geb corresponds to Lean's standard libraries'
+  definition, as the latter definition itself may depend on
+  `Classical.choice`. In such cases, define and prove as much as possible
+  without using `Classical.choice`, and place that development under
+  `Geb/Constructive`, then place what inevitably depends on
+  `Classical.choice` under `Geb/Classical`, keeping that code as close
+  as possible to being mere wrappers around `Geb/Constructive` code to
+  instantiate the Lean-library concepts.
 
 ## Tools
 
