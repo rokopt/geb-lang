@@ -6,4 +6,4 @@ For any form of communication, including potential contributions, see the
 [Code of Conduct](./CODE_OF_CONDUCT.md).
 
 When considering contributing code, see the
-[Contributing Guide](./CONTRIBUTING.md.).
+[Contributing Guide](./CONTRIBUTING.md).
