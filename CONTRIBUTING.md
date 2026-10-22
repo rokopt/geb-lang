@@ -73,15 +73,15 @@ may induce changes to previously-accepted _code_.)
 
 When writing Lean:
 
-- Use [Verso markup](https://verso.lean-lang.org/doc/latest/Verso-Markup/#verso-markup).
-- When introducing or extending concepts, add to the reference manual under
-  `Geb/Manual` to explain and index them.
 - Whenever not explicitly overridden by Geb style guidelines, adhere to:
   - [Lean's/mathlib's style guidelines](https://leanprover-community.github.io/contribute/style.html)
   - [cslib's style guidelines](https://github.com/leanprover/cslib/blob/main/CODESTYLE.md)
     (We are stricter in some cases; see in particular the remainder of
     these Lean style rules, and the
     [section on AI/LLM use below](#ai--llm-use).)
+- Use [Verso markup](https://verso.lean-lang.org/doc/latest/Verso-Markup/#verso-markup).
+- When introducing or extending concepts, add to the reference manual under
+  `Geb/Manual` to explain and index them.
 - We interpret Geb's logics into Lean; whenever you define a known concept in
   Geb, use Lean, `mathlib`, and `cslib` to prove that the Geb concept
   corresponds to the known concept that we intend. For example, if you define
