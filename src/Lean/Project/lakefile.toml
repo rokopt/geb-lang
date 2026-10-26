@@ -1,7 +1,7 @@
-name = "Geb"
+name = "GebLang"
 version = "0.1.0"
 keywords = ["math"]
-defaultTargets = ["Geb"]
+defaultTargets = ["GebLang"]
 lintDriver = "batteries/runLinter"
 
 [leanOptions]
@@ -44,6 +44,6 @@ scope = "leanprover-community"
 rev = "v4.36.0-rc1"
 
 [[lean_lib]]
-name = "Geb"
-roots = ["Geb", "Geb.Manual"]
-globs = ["Geb.*", "Geb.Manual.*"]
+name = "GebLang"
+roots = ["GebLang", "GebLang.Manual"]
+globs = ["GebLang.*", "GebLang.Manual.*"]

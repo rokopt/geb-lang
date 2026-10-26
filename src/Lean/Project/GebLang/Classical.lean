@@ -1,7 +1,7 @@
 module
 
-public import Geb.Classical.Basic
-import all Geb.Classical.Basic
+public import GebLang.Classical.Basic
+import all GebLang.Classical.Basic
 
 set_option doc.verso true
 
