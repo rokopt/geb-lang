@@ -31,7 +31,7 @@ rev = "0b885d88a69982cd76990b502742690b80b1a685"
 [[require]]
 name = "Canonical"
 scope = "chasenorman"
-rev = "f06340163923d0c05cace3a757206a36cc3cef44"
+rev = "v4.35.0"
 
 [[require]]
 name = "verso"
