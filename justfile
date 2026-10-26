@@ -45,16 +45,16 @@ jekyll-build:
 build:
 	lake build
 	lake lint
-	lake shake Geb
-	lake exe axiom-audit --root "Geb.Constructive" --modules-from "Geb/Constructive" --allow propext,Quot.sound
-	lake exe axiom-audit --root "Geb.Classical" --modules-from "Geb/Classical" --allow propext,Quot.sound,Classical.choice
-	lake exe axiom-audit --root "Geb.Manual" --modules-from "Geb/Manual" --allow propext,Quot.sound,Classical.choice
+	lake shake GebLang
+	lake exe axiom-audit --root "GebLang.Constructive" --modules-from "GebLang/Constructive" --allow propext,Quot.sound
+	lake exe axiom-audit --root "GebLang.Classical" --modules-from "GebLang/Classical" --allow propext,Quot.sound,Classical.choice
+	lake exe axiom-audit --root "GebLang.Manual" --modules-from "GebLang/Manual" --allow propext,Quot.sound,Classical.choice
 	lake exe lint-style
 	just bibtool-check
 	lake build :literate
 	lake build :literateHtml
 	lake exe verso-html .lake/build/literate html
-	DOCGEN_SRC=file lake build Geb:docs
+	DOCGEN_SRC=file lake build GebLang:docs
 	npx prettier --check .
 
 update: prettier-check

@@ -1,5 +1,5 @@
-import Geb.Constructive.Basic
-import Geb.Classical.Basic
+import GebLang.Constructive.Basic
+import GebLang.Classical.Basic
 
 set_option doc.verso true
 

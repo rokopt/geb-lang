@@ -1,5 +1,5 @@
-import Geb.Manual.TitlePage
-import Geb.Manual.Index
+import GebLang.Manual.TitlePage
+import GebLang.Manual.Index
 
 set_option doc.verso true
 

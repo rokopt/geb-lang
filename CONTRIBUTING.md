@@ -81,7 +81,7 @@ When writing Lean:
     [section on AI/LLM use below](#ai--llm-use).)
 - Use [Verso markup](https://verso.lean-lang.org/doc/latest/Verso-Markup/#verso-markup).
 - When introducing or extending concepts, add to the reference manual under
-  `Geb/Manual` to explain and index them.
+  `GebLang/Manual` to explain and index them.
 - We interpret Geb's logics into Lean; whenever you define a known concept in
   Geb, use Lean, `mathlib`, and `cslib` to prove that the Geb concept
   corresponds to the known concept that we intend. For example, if you define
@@ -99,9 +99,9 @@ When writing Lean:
   definition, as the latter definition itself may depend on
   `Classical.choice`. In such cases, define and prove as much as possible
   without using `Classical.choice`, and place that development under
-  `Geb/Constructive`, then place what inevitably depends on
-  `Classical.choice` under `Geb/Classical`, keeping that code as close
-  as possible to being mere wrappers around `Geb/Constructive` code to
+  `GebLang/Constructive`, then place what inevitably depends on
+  `Classical.choice` under `GebLang/Classical`, keeping that code as close
+  as possible to being mere wrappers around `GebLang/Constructive` code to
   instantiate the Lean-library concepts.
 
 ## Tools

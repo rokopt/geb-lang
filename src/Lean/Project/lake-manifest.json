@@ -201,6 +201,6 @@
    "inputRev": "master",
    "inherited": true,
    "configFile": "lakefile.toml"}],
- "name": "Geb",
+ "name": "GebLang",
  "lakeDir": ".lake",
  "fixedToolchain": false}
