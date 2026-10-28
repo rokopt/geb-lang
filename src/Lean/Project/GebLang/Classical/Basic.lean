@@ -6,7 +6,7 @@ set_option doc.verso true
 
 namespace ClassicalTest
 
-/-- Test allowance of choice under the `GebLang.Classical` directory.  -/
+/-- Test allowance of choice under the {lit}`GebLang/Classical` directory.  -/
 public theorem classicalProp {α : Prop} : Nonempty α → α := Classical.choice.{0}
 
 end ClassicalTest
