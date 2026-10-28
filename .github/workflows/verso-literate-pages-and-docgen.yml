@@ -31,7 +31,7 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v6
+            - uses: actions/checkout@main
 
             # leanprover/lean-action handles:
             #   - Installing elan (the Lean version manager)
@@ -40,7 +40,7 @@ jobs:
             # Note that the `source` links in the published `docgen`
             # docs are broken by:
             #   https://github.com/leanprover-community/docgen-action/issues/13
-            - uses: leanprover/lean-action@v1
+            - uses: leanprover/lean-action@main
             - name: Build homepage and `docgen` docs
               uses: leanprover-community/docgen-action@main
               with:
@@ -69,4 +69,4 @@ jobs:
         steps:
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v4
+              uses: actions/deploy-pages@main
