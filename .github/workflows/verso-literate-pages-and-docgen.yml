@@ -44,7 +44,7 @@ jobs:
             - name: Build homepage and `docgen` docs
               uses: rokopt/docgen-action@93c4a30939116a3908d0cd1b855188f04d2cc88c
               with:
-                  ruby-version: 4.0.9
+                  ruby-version: default
                   deploy: "false"
                   lake-package-directory: "src/Lean/Project"
                   references: "docs/references.bib"
