@@ -42,7 +42,7 @@ jobs:
             #   https://github.com/leanprover-community/docgen-action/issues/13
             - uses: leanprover/lean-action@main
             - name: Build homepage and `docgen` docs
-              uses: leanprover-community/docgen-action@main
+              uses: rokopt/docgen-action@93c4a30939116a3908d0cd1b855188f04d2cc88c
               with:
                   ruby-version: default
                   deploy: "false"
