@@ -34,6 +34,12 @@ scope = "chasenorman"
 rev = "v4.35.0"
 
 [[require]]
+name = "Canonical-min"
+scope = "rokopt"
+git = "https://github.com/rokopt/Canonical-min"
+rev = "9e1f90bf14c5cf0f639aff479728cc5eb5ea20ea"
+
+[[require]]
 name = "verso"
 git = "https://github.com/leanprover/verso.git"
 rev = "v4.36.0-rc2"
