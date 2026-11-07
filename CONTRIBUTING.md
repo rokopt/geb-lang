@@ -117,6 +117,10 @@ guidelines, such as refactoring opportunities.
 - You might also find ways of using SAT/SMT solvers, in particular via Lean
   integration, to synthesize Geb proofs and programs (since the reference Lean
   interpreter knows Geb terms and their Lean interpretations).
+- We recommend using Jujutsu version control (`jj`) in colocated mode,
+  rather than using `git` directly. This is not necessary, as `jj`
+  operates compatibly with direct use of `git`; the original author of
+  this repository has simply found `jj` a pleasant improvement.
 
 ## Processes
 

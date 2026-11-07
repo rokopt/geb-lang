@@ -12,3 +12,7 @@
   whenenver they appear they might be able to help. If the skill is not
   available but its options appear likely to be useful in helping with the
   user's requests, consider recommending it to the user.
+- If the user's clone is a colocated `jj` repository, then use `jj`
+  commands rather than direct `git` commands to interact with the
+  repository. (Though agents may not make code changes, they may, for
+  example, browse the repository state and history while code-reviewing.)
