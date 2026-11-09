@@ -29,15 +29,16 @@ git = "https://github.com/leanprover-community/axiom-audit"
 rev = "0b885d88a69982cd76990b502742690b80b1a685"
 
 [[require]]
-name = "Canonical"
-scope = "chasenorman"
-rev = "v4.35.0"
-
-[[require]]
 name = "Canonical-min"
 scope = "rokopt"
 git = "https://github.com/rokopt/Canonical-min"
 rev = "9e1f90bf14c5cf0f639aff479728cc5eb5ea20ea"
+
+[[require]]
+name = "Canonical"
+scope = "rokopt"
+git = "https://github.com/rokopt/CanonicalLean"
+rev = "c061166132defef75d8adefa7803fdb10d621f12"
 
 [[require]]
 name = "verso"
