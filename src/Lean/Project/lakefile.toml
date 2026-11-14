@@ -38,7 +38,7 @@ rev = "9e1f90bf14c5cf0f639aff479728cc5eb5ea20ea"
 name = "Canonical"
 scope = "rokopt"
 git = "https://github.com/rokopt/CanonicalLean"
-rev = "c061166132defef75d8adefa7803fdb10d621f12"
+rev = "c57eb57d6baa5f884cca4f1f630068c5bd682a62"
 
 [[require]]
 name = "verso"
