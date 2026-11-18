@@ -32,7 +32,7 @@ rev = "0b885d88a69982cd76990b502742690b80b1a685"
 name = "Canonical-min"
 scope = "rokopt"
 git = "https://github.com/rokopt/Canonical-min"
-rev = "9e1f90bf14c5cf0f639aff479728cc5eb5ea20ea"
+rev = "1a67f89ba0c2d944630e48501c4bb257dfa62c8e"
 
 [[require]]
 name = "Canonical"
