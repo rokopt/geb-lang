@@ -37,10 +37,9 @@ jobs:
             #   - Installing elan (the Lean version manager)
             #   - Reading lean-toolchain to select the right Lean version
             #   - Caching .lake for faster subsequent builds
-            # Note that the `source` links in the published `docgen`
-            # docs are broken by:
-            #   https://github.com/leanprover-community/docgen-action/issues/13
             - uses: leanprover/lean-action@main
+              with:
+                  lake-package-directory: "src/Lean/Project"
             - name: Build homepage and `docgen` docs
               uses: rokopt/docgen-action@main
               with:
@@ -50,10 +49,11 @@ jobs:
                   references: "docs/references.bib"
 
             - name: Copy `verso` docs into artifact
+              working-directory: src/Lean/Project
               run: |
                 literate_dir=$(lake query :literateHtml)
-                mkdir -p "$DOCS_DIR/verso"
-                cp -a "$literate_dir/." "$DOCS_DIR/verso/"
+                mkdir -p "$GITHUB_WORKSPACE/$DOCS_DIR/verso"
+                cp -a "$literate_dir/." "$GITHUB_WORKSPACE/$DOCS_DIR/verso/"
 
             - name: Upload combined artifact
               uses: actions/upload-pages-artifact@v3
