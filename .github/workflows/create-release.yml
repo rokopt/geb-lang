@@ -1,8 +1,5 @@
 name: Create Release
 
-# Note that this action is broken -- it never actually detects a release -- by:
-#   https://github.com/leanprover-community/lean-release-tag/issues/3
-
 on:
   workflow_dispatch:
   push:
@@ -21,5 +18,6 @@ jobs:
       - name: lean-release-tag action
         uses: rokopt/lean-release-tag@main
         with:
+          toolchain-path: src/Lean/Project/lean-toolchain
           do-release: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
