@@ -1,9 +1,7 @@
 module
 
-public import GebLang.Constructive
-import all GebLang.Constructive
-public import GebLang.Classical
-import all GebLang.Classical
+public import GebLang.Constructive.Basic
+public import GebLang.Classical.Basic
 
 set_option doc.verso true
 

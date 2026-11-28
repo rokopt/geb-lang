@@ -80,6 +80,10 @@ When writing Lean:
     these Lean style rules, and the
     [section on AI/LLM use below](#ai--llm-use).)
 - Use [Verso markup](https://verso.lean-lang.org/doc/latest/Verso-Markup/#verso-markup).
+- When adding a new file, import it from `GebLang.lean` (if it's under
+  `GebLang/Constructive` or `GebLang/Classical`) or `GebLang/Manual.lean`
+  (if it's under `GebLang/Manual`) to ensure that it is examined by
+  `lake exe lint-style`.
 - When introducing or extending concepts, add to the reference manual under
   `GebLang/Manual` to explain and index them.
 - We interpret Geb's logics into Lean; whenever you define a known concept in
